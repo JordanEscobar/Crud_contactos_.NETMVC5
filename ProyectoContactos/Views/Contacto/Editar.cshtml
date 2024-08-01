@@ -1,0 +1,37 @@
+﻿@model ProyectoContactos.Models.Contactos
+
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="card border-warning">
+            <div class="card-heading bg-warning" style="padding:10px">
+                <h6 class=" text-light">Editar contacto</h6>
+            </div>
+            <div class="card-body">
+                <form action="@Url.Action("Editar","Contacto")" method="post">
+                    <input type="hidden" name="id" value="@Html.DisplayTextFor(m => m.id)" />
+                    <div class="col-form-label-sm">
+                        <label>Nombres</label>
+                        <input type="text" class="form-control" name="nombre" value="@Html.DisplayTextFor(m => m.nombre)" />
+                    </div>
+                    <div class="col-form-label-sm">
+                        <label>Apellidos</label>
+                        <input type="text" class="form-control" name="apellidos" value="@Html.DisplayTextFor(m => m.apellidos)" />
+                    </div>
+                    <div class="col-form-label-sm">
+                        <label>Correo</label>
+                        <input type="email" class="form-control" name="correo" value="@Html.DisplayTextFor(m => m.correo)" />
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">Guardar</button>
+                    <a class="btn btn-warning btn-sm text-light" href="@Url.Action("Inicio","Contacto")">Volver</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+

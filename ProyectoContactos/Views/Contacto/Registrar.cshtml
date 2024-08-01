@@ -1,0 +1,39 @@
+﻿@model ProyectoContactos.Models.Contactos
+
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="card border-warning">
+            <div class="card-heading bg-warning" style="padding:10px">
+                <h6 class=" text-light">Nuevo contacto</h6>
+            </div>
+            <div class="card-body">
+                <form action="@Url.Action("Registrar","Contacto")" method="post">
+                    <div class="col-form-label-sm">
+                        <label >Nombres</label>
+                        <input type="text" class="form-control" name="nombre" required/>
+                    </div>
+                    <div class="col-form-label-sm">
+                        <label >Apellidos</label>
+                        <input type="text" class="form-control" name="apellidos" required/>
+                    </div>
+                    <div class="col-form-label-sm">
+                        <label >Correo</label>
+                        <input type="email" class="form-control" name="correo" required/>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm">Registrar</button>
+                    <a class="btn btn-warning btn-sm text-light" href="@Url.Action("Inicio","Contacto")">Volver</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
